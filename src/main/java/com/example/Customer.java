@@ -7,11 +7,11 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table
+@Table (name = "customer")
 public class Customer {
     @Id
     @GeneratedValue
-    int id;
+    String id;
 
     @Column
     String name;
@@ -23,11 +23,11 @@ public class Customer {
 
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -47,7 +47,7 @@ public class Customer {
         this.email = email;
     }
 
-    public Customer(int id, String name, String email) {
+    public Customer(String id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
